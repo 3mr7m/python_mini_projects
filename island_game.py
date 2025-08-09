@@ -1,52 +1,58 @@
-# show welcome message with pirate ascii code 
-# tell user there are two doors !
+# Show welcome message with pirate ASCII art
+# Tell the user there are two doors
 print("""
 ──▄────▄▄▄▄▄▄▄────▄───
 ─▀▀▄─▄█████████▄─▄▀▀──
 ─────██─▀███▀─██──────
 ───▄─▀████▀████▀─▄────
 ─▀█────██▀█▀██────█▀──
-Welcome to my island
-There are two doors in front of you. 🟥 a red door and 🟦 a blue door
+Welcome to my island!
+There are two doors in front of you: 🟥 a red door and 🟦 a blue door.
 """)
-# which door the user chose it ?
-# use .lower() to small charcters
-wich_door = input ("""which door do you want to open! 
-just write: red door
-or write: blue door
-""").lower()
-# use if condition to take user answer
-if wich_door ==  "blue door":
-    print(" you opened a blue 🟦 door!")
-    print("Oops, You chose the crocodile door\nGame over🐊🐊🐊🐊")
 
-elif wich_door == "red door":
-    print("Greet!, You opened a red 🟥 door!\nand you entered a room")
-    print("You found three boxes: ⬜White, ⬛Black, 🟩Green")
-    # ask user wich box he is open!
-    which_box = input ("Which Box do you open? ").lower()
-    # use if condition to take user answer
+# Ask which door the user chooses
+# Use .lower() to convert to lowercase
+which_door = input("""
+Which door do you want to open?
+Just type: red door
+Or type: blue door
+""").lower()
+
+# Use if condition to take user’s answer
+if which_door == "blue door":
+    print("You opened the 🟦 blue door!")
+    print("Oops! You chose the crocodile door.\nGame over 🐊🐊🐊🐊")
+
+elif which_door == "red door":
+    print("Great! You opened the 🟥 red door!\nAnd you entered a room.")
+    print("You found three boxes: ⬜ White, ⬛ Black, 🟩 Green")
+    
+    # Ask which box the user opens
+    which_box = input("Which box do you open? ").lower()
+    
+    # Use if condition to take user’s answer
     if which_box == "white":
         print("""
-        Oops!, you oppened a box filled with snakes🐍🐍🐍
-        Game Over☠️☠️☠️🏴‍☠️
+        Oops! You opened a box filled with snakes 🐍🐍🐍
+        Game Over ☠️☠️☠️🏴‍☠️
         """)
     elif which_box == "black":
         print("""
-        Oops!, you oppened a box filled with spiders🕷️🕷️🕷️
-        Game Over☠️☠️☠️🏴‍☠️
+        Oops! You opened a box filled with spiders 🕷️🕷️🕷️
+        Game Over ☠️☠️☠️🏴‍☠️
         """)
     elif which_box == "green":
         print("""
-        Congratulation!😃, You found the treasure 🥇🥇🥇
+        Congratulations! 😃 You found the treasure 🥇🥇🥇
         """)
-    # chek if the user write any input wrong!
+    # Check if the user entered an invalid input
     else:
-        print(f"Your input [{which_box}]isn't defined\nGame Over🦧🦧🦧")  
- 
-# chek if the user write any input wrong!
+        print(f"Your input [{which_box}] isn't valid.\nGame Over 🦧🦧🦧")  
+
+# Check if the user entered an invalid input
 else:
-    print(f"Your input [{wich_door}] isn't defined\nGame Over🦧🦧🦧")
-#-----------------------
+    print(f"Your input [{which_door}] isn't valid.\nGame Over 🦧🦧🦧")
+
+# -----------------------
 # Game Over
-#-----------------------
+# -----------------------
